@@ -1,0 +1,101 @@
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #121212;
+    --text-color-dark: #ffffff;
+    --btn-color: #f0f0f0;
+    --btn-bg: #007bff;
+    --btn-equal-bg: #28a745;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.calculator-container {
+    width: 300px;
+    text-align: center;
+}
+
+.theme-toggle {
+    margin-bottom: 10px;
+}
+
+#theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+.calculator {
+    background: var(--btn-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    text-align: right;
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #result {
+    background: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--btn-bg);
+    color: var(--text-color-light);
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--btn-equal-bg);
+    color: var(--text-color-dark);
+}
+
+.equals {
+    grid-column: span 2;
+    background: var(--btn-equal-bg);
+    color: var(--text-color-light);
+}
+
+.equals:hover {
+    background: #218838;
+}
